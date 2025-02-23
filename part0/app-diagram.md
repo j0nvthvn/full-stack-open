@@ -2,30 +2,30 @@
 
 ```mermaid
 sequenceDiagram
-    participant browser
-    participant server
+    participant navegador
+    participant servidor
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
-    activate server
-    server-->>browser: HTML document
-    deactivate server
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate servidor
+    servidor-->>navegador: documento HTML
+    deactivate servidor
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
-    activate server
-    server-->>browser: the css file
-    deactivate server
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate servidor
+    servidor-->>navegador: el archivo css
+    deactivate servidor
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
-    activate server
-    server-->>browser: the JavaScript file
-    deactivate server
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activate servidor
+    servidor-->>navegador: el archivo JavaScript
+    deactivate servidor
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of navegador: El navegador comienza a ejecutar el código JavaScript que busca el JSON del servidor
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
-    deactivate server
+    navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate servidor
+    servidor-->>navegador: [{ "content": "HTML is very easy", "date": "2025-1-1" }, ... ]
+    deactivate servidor
 
-    Note right of browser: The browser executes the callback function that renders the notes
+    Note right of navegador: El navegador ejecuta la función callback que renderiza las notas
 ```
